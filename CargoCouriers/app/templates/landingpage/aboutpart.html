@@ -1,0 +1,55 @@
+{% load static %}
+
+<style>
+    .about_part {
+        position: relative;
+        z-index: 1;
+        position: relative;
+        z-index: 1;
+        padding: 4% 0 6%;
+    }
+
+    .about_part .about_part_text {
+        background-color: #fff;
+    }
+
+    .about_part .about_part_text .about_text_iner {
+        border-left: 3px solid #bbbab9;
+        padding-left: 39px;
+        padding: 25px 34px 12px;
+    }
+
+    .about_part h2 {
+        font-size: 42px;
+        color: #6345fe;
+        text-align: left;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+    }
+
+    .about_part .about_part_text .about_text_iner p {
+        color: #777;
+        margin-bottom: 25px;
+        position: relative;
+    }
+</style>
+
+<section class="about_part">
+    <div class="container">
+        <div class="row">
+             <div class="col-lg-7">
+                <div class="about_part_text">
+                    <div class="about_text_iner">
+                        <h2><span class="black">Who</span> We Are</h2>
+                        <p>Truxcargo Pvt. Ltd. is an AI-Enabled Shipping Platform (SaaS) with decades of knowledge and experience. It is one of the fast-growing tech-enabled logistics companies that offers industry-best pricing with leading shipping partners for all your shipping needs. With Truxcargo, you will get multiple shipping partners with comparable rates and much more from a single platform. Truxcargo has been using innovative ideas to simplify the eCommerce platform for sellers and save essential time and money. We help sellers to focus on their business rather than finding reliable shipping partners.</p>
+                          <p>Our aim is to provide hassle-free and streamlined shipping solutions to make your market presence a smooth ride. It offers an innovative one-stop shop for all logistics services, right from the automatic allocation of the courier to dispatch to the last mile delivery of packages.</p>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 about di-none" style="padding: 0">
+                <img src="{% static '/plugins/who.png' %}" alt="Truxcargo" style="max-width: 100%;">
+            </div>
+        </div>
+    </div>
+</section>

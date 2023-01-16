@@ -1,0 +1,76 @@
+{% load static %}
+
+<style>
+    .service_part {
+        padding: 90px 0 90px;
+    }
+
+    .white {
+        color: #fff;
+    }
+
+    .service_part .single_service_text {
+        width: 50%;
+        float: left;
+        margin-bottom: 45px;
+        display: flex;
+    }
+
+    .service_part .single_service_text img {
+        max-height: 55px;
+    }
+
+    .service_part .single_service_text h4 {
+        font-size: 28px;
+        font-weight: 500;
+        color: #fff;
+        margin: 0;
+    }
+
+    .service_part .single_service_text p {
+        color: #fff;
+        font-size: 16px;
+    }
+
+
+</style>
+
+<section class="service_part service_part1 section_padding" style="background: url(https://truxcargo.com/assets/img/banner-bottom.jpg); background-repeat: no-repeat; background-size: 100% 100%;">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-6">
+                <div class="service_text mt-4">
+                    <img src="{% static '/plugins/network.png' %}" style="margin-top:6%; max-width: 90%;">  
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h1 class="white mt-4" style="text-transform: uppercase;">Truxcargo Superiority</h1>
+                <div class="single_service_text">
+                    <div class="col-lg-4"><img src="{% static '/plugins/customer.png' %}" alt=""></div>
+                    <div class="col-lg-8"><h4> 7460+ </h4><p>Happy Clients</p></div>
+                </div>
+                <div class="single_service_text">
+                    <div class="col-lg-4"><img src="{% static '/plugins/box.png' %}" alt=""></div>
+                    <div class="col-lg-8"><h4>75M + </h4><p>Orders Delivered</p></div>
+                </div>
+                <div class="single_service_text">
+                    <div class="col-lg-4"><img src="{% static '/plugins/experts.png' %}" alt=""></div>
+                    <div class="col-lg-8"><h4> 73+ </h4><p>Our Experts</p></div>
+                </div>
+                <div class="single_service_text">
+                    <div class="col-lg-4"><img src="{% static '/plugins/integration.png' %}" alt=""></div>
+                    <div class="col-lg-8"><h4> 2790+ </h4><p>API Integrations</p></div>
+                </div>
+                <div class="single_service_text">
+                    <div class="col-lg-4"><img src="{% static '/plugins/warehouse.png' %}" alt=""></div>
+                    <div class="col-lg-8"><h4> 17+ </h4><p>Own Warehouses</p></div>
+                </div>
+                
+                <div class="single_service_text">
+                    <div class="col-lg-4"><img src="{% static '/plugins/pincodes.png' %}" alt=""></div>
+                    <div class="col-lg-8"><h4> 29000+ </h4><p>Served Pincodes</p></div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</section>
