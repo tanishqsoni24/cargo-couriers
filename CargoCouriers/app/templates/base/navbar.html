@@ -1,35 +1,114 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+{% load static %}
+
+<style>
+  :root{
+    --theme: #674afe;
+  }
+
+  .navbar>.container-fluid{
+    justify-content: space-around;
+  }
+
+  .brandName{
+    width: 15%;
+  }
+
+  .brandName img{
+    max-width: 100%;
+  }
+
+  .navItems{
+    flex-grow: 0;
+  }
+
+  .nav-item > a{
+    color: black;
+  }
+
+  .nav-link:hover{
+    color: var(--theme);
+  }
+
+  .dropNavItem{
+    background: var(--theme);
+  }
+  
+  .dropdown-item{
+    color: white;
+  }
+  
+  .dropdown-item:hover{
+    background: var(--theme);
+    color: white;
+  }
+  
+  .authButtons button:nth-child(1){
+    border: 2px solid var(--theme);
+    color: var(--theme);
+    border-radius: 5px 0px 0px 5px;
+  }
+  
+  .authButtons button:nth-child(1):active{
+    border: 2px solid var(--theme);
+    color: white;
+    background: var(--theme);
+  }
+  
+  .authButtons button:nth-child(2){
+    background: var(--theme);
+    border-radius: 0px 5px 5px 0px;
+    color: white;
+  }
+
+  .authButtons button:nth-child(2):active{
+    background: var(--theme);
+  }
+</style>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid navComponents">
+    <a class="navbar-brand brandName" href="#"><img src="{% static '/plugins/logo.png' %}" alt="not"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse navItems" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link px-3" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link px-3" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Services</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+          <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Delivery
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu dropNavItem">
+            <li><a class="dropdown-item" href="#">NDR Management</a></li>
+            <li><a class="dropdown-item" href="#">Weight Reconciliation</a></li>
+            <!-- <li><hr class="dropdown-divider"></li> -->
+            <li><a class="dropdown-item" href="#">Timely COD Remittance</a></li>
+            <li><a class="dropdown-item" href="#">Multiple Pickup Location</a></li>
+            <li><a class="dropdown-item" href="#">Multiple Share Partners</a></li>
+            <li><a class="dropdown-item" href="#">Shipping Rate Calculator</a></li>
           </ul>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link px-3" href="#">Get Invoice</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" href="#">Contact</a>
         </li>
       </ul>
-      <div class="d-flex" >
-        <button class="btn btn-outline-success">Login</button>
-        <button class="btn btn-success">Signup</button>
+      <div class="d-flex authButtons " >
+        <button class="btn">Login</button>
+        <button class="btn">Signup</button>
       </div>
     </div>
   </div>

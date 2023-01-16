@@ -1,0 +1,252 @@
+{% load static %}
+
+<style>
+    .banner_part {
+        height: 530px;
+        position: relative;
+        background-image: url("{% static 'plugins/banner_bg.png' %}");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 2;
+    }
+
+    #overlay {
+        width: 100%;
+        height: 100%;
+        background-color: rgb(0 0 0 / .3);
+    }
+
+    .banner_part .banner_text {
+        display: table;
+        width: 100%;
+        height: 530px;
+        padding-top: 0;
+    }
+
+    .banner_part .banner_text .banner_text_iner {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .banner_part .banner_text h1 {
+        font-size: 46px;
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.27;
+        color: #fff;
+        margin-top: 80px;
+    }
+
+    .banner_part .banner_text p {
+        margin-bottom: 5px;
+        line-height: 1.6;
+        font-family: "Poppins", sans-serif;
+        color: #fff;
+        font-size: 19px;
+        text-transform: capitalize;
+    }
+
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        width: 100%;
+        margin-top: 15%;
+    }
+
+    .tabcontent {
+        display: none;
+        padding: 10px 25px 16px;
+        border: 1px solid #ccc;
+        border-top: none;
+        background: rgb(255 255 255 / .6);
+        border-radius: 0px 0 14px 14px;
+    }
+
+    .tabcontent h3 {
+        margin: 13px 0;
+        font-size: 16px;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: .3px;
+        text-shadow: 1px 0px 0px #c8c7c9;
+    }
+    
+    form.search-box {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 50px;
+        margin-bottom: 10px;
+        margin-top: 3px;
+    }
+
+    .ered {
+        color: red;
+        background: #fff;
+        padding: 5px 13px;
+        font-size: 14px;
+        text-transform: capitalize;
+        font-weight: 500;
+        display: none;
+    }
+
+    form.search-box .input-form {
+        width: 72%;
+        position: relative;
+        overflow: hidden;
+    }
+
+    form.search-box .search-form {
+        width: 27%;
+        overflow: hidden;
+    }
+
+    form.search-box .input-form input {
+        height: 38px;
+        width: 100%;
+        color: #777777;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 9px 26px 9px 15px;
+        border: 1px solid #9d9d9d;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-right: 0;
+    }
+
+    form.search-box .search-form .button {
+        width: 100%;
+        height: 38px;
+        background: #000;
+        border: 0;
+        text-align: center;
+        cursor: pointer;
+        color: #fff;
+        display: block;
+        padding: 3px;
+        border-radius: 0px;
+        text-transform: uppercase;
+        line-height: 18px;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        letter-spacing: 0.03em;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 8px;
+        transition: 0.3s;
+        width: 50%;
+    }
+
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 8px;
+        transition: 0.3s;
+        width: 50%;
+    }
+
+    .tab button.active {
+        background-color: #674afe;
+        color: #fff;
+    }
+
+    .banner_part:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        opacity: .3;
+    }
+</style>
+
+<section class="banner_part">
+    <div id="overlay">
+        <div class="container">
+          <div class="row align-items-center">
+               
+             <div class="col-lg-6">
+                 <div class="banner_text">
+                     <div class="banner_text_iner">
+                        <h1>One Stop Solution <br> For all shipping Needs</h1>
+                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i> Ship Over 29000+Pincodes</p>
+                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i> Multiple Courier Partners</p>
+                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i> Early COD Remittance</p>
+                        <p><i class="fa fa-check-circle-o" aria-hidden="true"></i> Dedicated support team</p>
+                     </div>
+                 </div>
+             </div>
+             <div class="col-lg-6">
+                 <div class="banner_text">
+                     <div class="banner_text_iner">                           
+                        <div class="col-lg-11" style=" width: 90%; margin:auto">
+                          <div class="tab">
+                             <button class="tablinks active" onclick="openCity(event, 'track')">Track Shipment</button>
+                             <button class="tablinks " onclick="openCity(event, 'code')">Pincode Serviceability</button>
+                          </div> 
+                            <div id="track" class="tabcontent" style="display:block">
+                                <h3>TRACK YOUR SHIPMENT</h3>
+                                <form action="" method="post" class="search-box" id="myForm" autocomplete="off">
+                                    <div class="input-form">
+                                        <input type="text" id="awb" name="awb" placeholder="Your Tracking No">
+                                    </div>
+                                    <div class="search-form">
+                                        <button type="submit" class="button">Track </button>
+                                    </div>
+                                </form>
+                                <span class="ered" id="error"></span>
+                            </div>
+                            <div id="code" class="tabcontent">
+                                <h3>Pincode Serviceability</h3>
+                                <form action="" method="post" id="ship_form" class="search-box" autocomplete="off">
+                                    <div class="input-form">
+                                        <input type="text" id="pincode" name="pincode" placeholder="Enter Six Digit Pincode" required="required">
+                                    </div>
+                                    <div class="search-form">
+                                        <button type="submit" class="button">Check It</button>
+                                    </div>
+                                </form>	
+                                <span class="ered" id="perror"></span>
+                            </div>
+                        </div> 
+                     </div>
+                 </div>
+             </div>
+                 </div>             
+          </div>
+         </div>
+</section>
+
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent"); 
+        for (i = 0; i < tabcontent.length; i++) { 
+            tabcontent[i].style.display = "none"; 
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) { 
+            tablinks[i].className = tablinks[i].className.replace(" active", ""); 
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
