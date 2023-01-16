@@ -1,0 +1,60 @@
+{% load static %}
+
+<style>
+    .service_part .service_text h2 {
+        font-size: 44px;
+        text-transform: capitalize;
+        color: #000;
+    }
+
+    h3 {
+        font-size: 24px;
+        line-height:1.2em;
+    }
+
+    .service_part .service_text p {
+        margin-bottom: 15px;
+    }
+
+    .service_part .service_text .btn_1 {
+        margin-top: 15px;
+    }
+
+    .btn_1 {
+        display: inline-block;
+        padding: 15px 25px;
+        border-radius: 4px;
+        font-size: 15px;
+        color: #fff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        background-color: #000;
+        font-weight: 600;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        border: 1px solid #000;
+        width: max-content;
+    }
+</style>
+
+<section class="service_part" style="background: #f0f8ff;">
+    <div class="container">
+        <div class="row justify-content-between">
+             <div class="col-lg-7" style="padding-right:0">
+                <div class="service_text">
+                    <h2><b class="blue">Calculate</b> your shipping rates with us.</h2>
+                    <h3>Our Freight Rate Calculator Saves You Time &amp; Money </h3>
+                    <p>Calculate your shipping cost beforehand with Cargo-Courier instant rate calculator.
+                        Understand your shipping cost based on the pin codes, weight, pickup, and delivery locations.
+                        When you ship via Cargo-Courier,  you get the benefit of comparing shipping rates of different shipping partners.
+                    </p>
+                    <a href="" class="cta_btn btn_1" style="text-decoration: none;">Get Started</a>
+                 </div>
+            </div>
+            <div class="col-lg-5" style="padding:0">
+                <img src="{% static '/plugins/rate-calculator.png' %}" alt="Rate Calculator" style="max-width:100%">
+            </div>
+            
+        </div>
+    </div>
+</section>

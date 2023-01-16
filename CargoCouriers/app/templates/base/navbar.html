@@ -42,25 +42,25 @@
     color: white;
   }
   
-  .authButtons button:nth-child(1){
+  .authButtons a:nth-child(1){
     border: 2px solid var(--theme);
     color: var(--theme);
     border-radius: 5px 0px 0px 5px;
   }
   
-  .authButtons button:nth-child(1):active{
+  .authButtons a:nth-child(1):active{
     border: 2px solid var(--theme);
     color: white;
     background: var(--theme);
   }
   
-  .authButtons button:nth-child(2){
+  .authButtons a:nth-child(2){
     background: var(--theme);
     border-radius: 0px 5px 5px 0px;
     color: white;
   }
 
-  .authButtons button:nth-child(2):active{
+  .authButtons a:nth-child(2):active{
     background: var(--theme);
   }
 </style>
@@ -109,8 +109,8 @@
       </ul>
 
       <div class="d-flex authButtons " >
-        <button class="btn">Login</button>
-        <button class="btn">Signup</button>
+        <a href="/login" class="btn">Login</a>
+        <a href="/signup" class="btn">Signup</a>
       </div>
     </div>
   </div>
